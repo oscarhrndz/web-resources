@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> SVG | Canvas </title>
+
+</head>
+<body>
+
+  <!-- 01. Drawing -->
+  <canvas id="myCanvas" width="500" height="500" syle="border:1px solid black;"></canvas>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0, 0, 150, 75);
+  </script>
+
+  <!-- 02. Coordinates -->
+  <script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+  </script>
+
+  <!-- 03. Gradient -->
+  <script type="text/javascript">
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+  </script>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- 04. Text -->
+  <script type="text/javascript">
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 10, 50);
+  </script>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- 05. Images -->
+  <img id="porsche" width="400" hieght="400" src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/pnr/2021/Scene-Passion/Taycan-Cross-Turismo-Brazil/gallery/44.-Sao-Paulo.jpeg/jcr:content/44.%20Sao%20Paulo.jpeg" alt="Porsche">
+
+  <script type="text/javascript">
+    window.onload = function(){
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      var img = document.getElementById("porsche");
+      ctx.drawImage(img, 10, 10);
+    }
+  </script>
+
+</body>
+</html>
