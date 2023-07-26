@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> JavaScript | Basics</title>
+  </head>
+  <body>
+
+    <!-- JavaScript Output -->
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = 10 + 20;
+    </script>
+
+    <script>
+    document.write(10+20);
+    </script>
+
+    <br>
+    <br>
+
+    <button type="button" onclick="document.write(5+6)" name="button">Try it</button>
+
+    <script type="text/javascript">
+      window.alert(10+20);
+    </script>
+
+    <script>
+
+      console.log("this is console.log")
+
+    </script>
+
+  <!-- Start JavaScript Here -->
+  <script type="text/javascript" src="basics.js"></script>
+
+  <script>
+
+  console.log("script 03")
+
+  </script>
+
+  <button onclick="window.print()" name="button">Print this page</button>
+
+  <p id="total"></p>
+
+  <!-- 02. JavaScript Statements -->
+  <script type="text/javascript">
+    var x, y, z;
+    x=5;
+    y=6;
+    z = x + y;
+
+  document.getElementById("total").innerHTML = "The value of z is "
+
+  </script>
+
+  <!-- 03. JavaScript Syntax -->
+    <!-- 01. JavaScript Literals
+          - Numbers are written with or without decimals
+          - Strings are text, written within double or single quotes:
+              "String" 'String'
+          02. JavaScript Variables
+            - Variables are used to store data values
+            - JavaScript uses the var keyword to declare variablles.
+            - An equal sign is used to assign values to Vaariables.
+              Example:  var x;
+                        x = 6;
+          03. Arithmetic Operator (+ - * /) Example: {5 + 10}
+          04. Assigment Operator (=)
+          05. JavaScript Expressions: is a combination od values, variables and operators, which computes to a value.
+          The computation is called an evaluation. -->
+
+
+
+  <p id="let"></p>
+
+
+  <!-- 13. Events -->
+  <button onclick="this.innerHTML = Date()">The time is?</button>
+
+
+  <!-- 26. Math -->
+  <p id="math"></p>
+
+  <script>
+    document.getElementById("math").innerHTML = Math.PI;
+  </script>
+
+
+  <!-- 27. Random -->
+  <p id="math"></p>
+
+  <script>
+    document.getElementById("math").innerHTML = Math.floor(Math.random() * 20);
+  </script>
+
+
+  <!-- 31. Switch -->
+  <script>
+    var day;
+    switch(new Date().getDay()) {
+      case 0;
+      day = "Sunday";
+      break;
+      case 1;
+      day = "Monday";
+      break;
+      case 2;
+      day = "Tuesday";
+      break;
+      case 3;
+      day = "Wednesday";
+      break;
+      case 4;
+      day = "Thursday";
+      break;
+      case 5;
+      day = "Friday";
+      break;
+      case 6;
+      day = "Saturday";
+      break;
+    }
+    document.getElementById('switch').innerHTML = "Today is " + day;
+  </script>
+
+</script>
+
+
+  <!-- 32. Loop For -->
+  <p id="cars"><p/>
+
+  <script>
+    var cars = ["Porsche", "Ford", "BMW", "Chevy", "GMC", "Toyota", "Ferrari", "Lincoln"];
+    var text = "";
+    var i;
+    for(i=0; i < cars.length; i++){
+      text += cars[i] + "<br>";
+    }
+    document.getElementById("cars").innerHTML = text;
+  </script>
+
+
+  <!-- 33. Loop While -->
+  <p id="while"></p>
+
+  <script>
+    var text = "";
+    var i = 0;
+    while (i < 10) {
+      text += "<br> The number is " + i;
+      i++;
+    }
+    document.getElementById("while").innerHTML = text;
+  </script>
+
+
+  <!--34. Break -->
+
+  <!-- Break -->
+  <p id="break"></p>
+
+  <script>
+    var text = "";
+    var i;
+    for(i = 0; i < 30; i++) {
+      if (i === 30) { break; }
+      text += "The number is " + i + "<br>";
+    }
+    document.getElementById("break").innerHTML = text;
+  </script>
+
+
+  <-- Continue -->
+  <p id="continue"></p>
+
+  <script>
+    var text = "";
+    var i;
+    for(i = 0; i < 10; i++) {
+      if (i === 10) { continue; }
+      text += "The number is " + i + "<br>";
+    }
+    document.getElementById("continue").innerHTML = text;
+  </script>
+
+
+  <!-- 36. RegExp -->
+  <!-- 1.0 -->
+  <p id="search"></p>
+
+  <script>
+    var str = "this is my string";
+    var n = str.search("string");
+    document.getElementById("search").innerHTML= n;
+  </script>
+
+  <!-- 2.0 -->
+  <button onclick="myFunction()">Press Here</button>
+
+  <p id="replace">Please Visit my Website Google</p>
+
+  <script>
+    function myFunction() {
+      var str = document.getElementById("replace").innerHTML;
+      var txt = str.replace("Google", "Learn Tech Plus");
+      document.getElementById("replace").innerHTML = txt;
+    }
+  </script>
+
+
+  <!-- 37. Arrow Function -->
+  <p id="function"></p>
+
+  <script>
+    var hello;
+
+    hello = () => {
+      return "Hello World"
+    }
+    document.getElementById("function").innerHTML = hello();
+  </script>
+
+
+  <!-- 38. Classes -->
+  <p id="classes"></p>
+
+  <script>
+  class Car {
+    constructor(name, year) {
+      this.name = name;
+      this.year = year;
+    }
+  }
+  myCar = new Car("Porsche", 2022);
+  document.getElementById("classes").innerHTML = myCar.name + " " + myCar.year;
+  </script>
+
+
+  <script scr="basics.js">
+
+  </script>
+
+
+  </body>
+</html>
